@@ -5,7 +5,7 @@ RELEASE_VERSION=$2
 USER_NAME=$3
 EMAIL=$4
 
-sleep 10
+sleep 60
 
 git config user.name "$USER_NAME"
 git config user.email "$EMAIL"
