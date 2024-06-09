@@ -24,3 +24,5 @@ jobs:
           chmod +x "${GITHUB_WORKSPACE}/protoc.sh"
           ls -alh ${GITHUB_WORKSPACE}
           ./protoc.sh ${{ matrix.service }} ${{ env.RELEASE_VERSION }} ${{ github.actor }} ${{ github.actor }}@users.noreply.github.com
+      - name: Delay
+        run: sleep 30
