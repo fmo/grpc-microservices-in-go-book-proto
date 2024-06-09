@@ -5,8 +5,6 @@ RELEASE_VERSION=$2
 USER_NAME=$3
 EMAIL=$4
 
-sleep 60
-
 git config user.name "$USER_NAME"
 git config user.email "$EMAIL"
 git pull --all && git checkout main
@@ -24,6 +22,8 @@ cd golang/${SERVICE_NAME}
 go mod init github.com/fmo/microservices-proto/golang/${SERVICE_NAME} || true
 go mod tidy
 cd ../../
+
+git pull --all
 
 git add . && git commit -am "proto update" || true
 git push origin HEAD:main
