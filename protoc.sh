@@ -23,8 +23,6 @@ go mod init github.com/fmo/microservices-proto/golang/${SERVICE_NAME} || true
 go mod tidy
 cd ../../
 
-git pull --all
-
 git add . && git commit -am "proto update" || true
 git push origin HEAD:main
 git tag -fa golang/${SERVICE_NAME}/${RELEASE_VERSION} -m "golang/${SERVICE_NAME}/${RELEASE_VERSION}"
