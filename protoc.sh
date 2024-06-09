@@ -23,7 +23,7 @@ go mod init github.com/fmo/microservices-proto/golang/${SERVICE_NAME} || true
 go mod tidy
 cd ../../
 
-git config --global user.email "mustafa.ozyurt@gmail.com"
+git config --global user.email "fmo@gmail.com"
 git config --global user.name "Mustafa Özyurt"
 
 git add . && git commit -am "proto update" || true
